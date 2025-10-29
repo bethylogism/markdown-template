@@ -110,11 +110,14 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  /* list-style: none; */
 }
 blockquote,
 q {
   quotes: none;
+  right: 0;
+  text-align: right;
+  font-size: 0.85em;
 }
 blockquote:before,
 blockquote:after,
@@ -174,11 +177,11 @@ ul {
 }
 
 /*uncomment to get dashes in the list*/
-li:before {
+/* li:before {
   content: "•";
   position: relative;
   left: -0.45em;
-}
+} */
 
 li {
   /*second line indent*/
@@ -219,14 +222,16 @@ h1 + p {
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #a00;
-  margin-top: 3em;
+  padding-top: 1em;
   position: relative;
-  top: 1.4em;
+  top: 1em;
   text-align: right;
   width: 20%;
   font-style: italic;
+  vertical-align: middle;
+  line-height: 1.3em;
 }
 
 h3 {
@@ -277,7 +282,13 @@ strong {
 p:has(+ ul) {
   font-style: italic;
   color: #777;
-  /* margin-bottom: 0; */
+}
+
+/* Style horizontal rules (from --- in markdown) */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-top: 0.2em;
 }
 
 /*
